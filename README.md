@@ -1,310 +1,157 @@
-# HistoPLUS
+# 🧩 Execution Environment & `run.sh` Usage Guide
 
-## Towards Comprehensive Cellular Characterisation of H&E slides
+본 프로젝트는 **Docker 기반 실행 환경**을 사용하며,
+환경 일관성과 서버 간 이동성을 위해 **`run.sh` 스크립트**를 통해 컨테이너를 실행합니다.
 
-[![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.4+-orange.svg)](https://pytorch.org/)
-[![Documentation](https://img.shields.io/badge/docs-github.com/owkin/histoplus-green.svg)](https://github.com/owkin/histoplus)
 ---
 
-Corresponding pre-print paper can be found [here](https://arxiv.org/abs/2508.09926).
+## 1️⃣ ENV 설정을 사용하는 이유
 
-🤗 You can request access to the weights of the model [here](https://huggingface.co/Owkin-Bioptimus/histoplus).
+### 🎯 목적
 
+* **경로/캐시/사용자 환경을 코드에서 하드코딩하지 않기 위함**
+* 서버마다 다른 홈 경로, 스토리지 구조를 **유연하게 대응**
+* Docker 내부에서도 **호스트와 동일한 경로 체계**를 유지
 
-## Table of Contents
+### 🔧 주요 ENV 변수
 
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Technology Stack](#technology-stack--model-details)
-- [Installation](#installation)
-- [Quick Start](#quick-start--example-usage)
-- [Evaluation & Metrics](#evaluation--metrics)
-- [Model Card](#model-card--responsible-use)
-- [Citing This Work](#citing-this-work)
-- [Contributing](#contributing)
-- [License & Authorship](#license--authorship)
-- [Acknowledgements](#acknowledgements)
+컨테이너 실행 시 아래 환경 변수들이 전달됩니다.
 
-## Overview
+* `HOST_USER` : 호스트 사용자 이름
+* `HOST_UID` : 호스트 사용자 UID
+* `HOST_GID` : 호스트 사용자 GID
 
-HistoPLUS addresses critical challenges in analyzing tumor microenvironments (TME) on hematoxylin and eosin (H&E) stained histopathology slides. Existing methods suffer from poor performance on understudied cell types and limited cross-domain generalization, hindering comprehensive TME analysis.
+이를 통해:
 
-**Why it matters:**
-- Cell detection, segmentation, and classification are fundamental for understanding tumor biology
-- Current methods fail on rare cell types not well-represented in public datasets
-- Cross-institutional and cross-indication performance remains limited
+* 컨테이너 내부에서 생성된 파일의 **권한 문제 방지**
+* NAS / 공용 스토리지 사용 시 **파일 소유권 충돌 최소화**
 
-**Our approach:**
-HistoPLUS introduces a CellViT architecture incorporating a state-of-the-art specialized foundation model and trained on a novel and carefully curated pan-cancer dataset of 108,722 nuclei spanning 13 distinct cell types. The model achieves state-of-the-art performance while using significantly fewer parameters, enabling robust analysis of both common and understudied cell populations.
-
-
-## Key Features
-
-- 🎯 **Unprecedented performances**: Demonstrates 5.2% improvement in detection quality and 23.7% improvement in overall F1 classification score
-- 📊 **13 cell types**: Improves cell type coverage by enabling the study of 7 previously understudied populations
-- 🧠 **State-of-the-art Foundation Models**: Integrates the latest specialized Pathology Foundation Models
-- 🌐 **Cross-domain robustness**: Validated across 6 independent cohorts, including 2 unseen oncology indications
-- ⚡ **Efficient inference**: 5x fewer parameters than competing methods
-- 🔧 **Easy deployment**: Simple CLI and Python API
-- 📁 **Multiple formats**: Supports various whole slide image formats
-- 🔬 **Adaptable to multiple magnification**: Supports 20x and 40x magnification
-
-If you wish to convert the output prediction to a GeoJSON format (to visualize the predictions in QuPath for instance), you can refer to [#23](https://github.com/owkin/histoplus/issues/23).
-
-## Technology Stack & Model Details
-
-**Core Dependencies:**
-- **Python**: ≥3.10
-- **PyTorch**: ≥2.4.1 with GPU support
-- **OpenSlide**: ≥1.3.1 for WSI processing
-- **TIMM**: 1.0.8 for transformer backbones
-- **XFormers**: ≥0.0.29 for efficient attention
-
-**Input/Output Formats:**
-- **Input**: H&E whole slide images (.svs, .tiff, .ndpi, etc.)
-- **Output**: JSON annotations with cell coordinates, types, and confidence scores
-
-**Hardware Requirements:**
-- **GPU**: NVIDIA GPU with ≥8GB VRAM recommended
-- **RAM**: ≥16GB system memory
-- **Storage**: Variable based on slide size (typically 100MB-2GB per slide)
-
-## Installation
-
-### Prerequisites
-
-```bash
-# Ensure Python 3.10+ is installed
-python --version
-
-# Install OpenSlide system dependencies (Ubuntu/Debian)
-sudo apt-get install openslide-tools
-
-# For macOS with Homebrew
-brew install openslide
-```
-
-### Install from PyPI (Coming Soon!)
-
-```bash
-pip install histoplus
-```
-
-### Install from Source (Alternative)
-
-```bash
-# Clone the repository
-git clone https://github.com/owkin/histoplus.git
-cd histoplus
-
-# Install in development mode
-pip install -e .
-
-# Optional: Install development dependencies
-pip install -e ".[dev,testing,linting]"
-```
-
-### Verify Installation
-
-```bash
-histoplus --help
-```
-
-## Quick Start / Example Usage
-
-### Command Line Interface
-
-```bash
-histoplus \
-    --slides ./TCGA-G2-A2EC-01Z-00-DX4.8E4382A4-71F9-4BC3-89AA-09B4F1B54985.svs \
-    --export_dir ./ \
-    --batch_size 8
-```
-
-### Python API
-
-```python
-import openslide
-from histoplus.extract import extract
-from histoplus.helpers.segmentor import CellViTSegmentor
-from histoplus.helpers.tissue_detection import detect_tissue_on_wsi
-
-MPP = 0.25  # If available, otherwise set to 0.5
-INFERENCE_IMAGE_SIZE = 784
-
-slide = openslide.open_slide("./TCGA-G2-A2EC-01Z-00-DX4.8E4382A4-71F9-4BC3-89AA-09B4F1B54985.svs")
-
-tissue_coords, dz_level = detect_tissue_on_wsi(slide)
-
-segmentor = CellViTSegmentor.from_histoplus(
-    mpp=MPP,
-    mixed_precision=True,
-    inference_image_size=INFERENCE_IMAGE_SIZE,
-)
-
-# Process a whole slide image
-results = extract(
-    slide=slide,
-    coords=tissue_coords,
-    deepzoom_level=dz_level,
-    segmentor=segmentor,
-    batch_size=8,
-)
-
-# Save results
-results.save("output/results.json")
-```
-
-### Expected Output
-
-```json
-{
-  "model_name": "histoplus_v1",
-  "inference_mpp": 0.25,
-  "cell_masks": [
-    {
-      "x": 1,
-      "y": 1,
-      "level": 16,
-      "width": 224,
-      "height": 224,
-      "masks": [
-        {
-            "cell_id": 1,
-            "cell_type": "Plasmocyte",
-            "confidence": 0.94,
-            "coordinates": [[1000, 2024], [1048, 2024], ...],
-            "centroid": [1024, 2048]
-        }
-      ]
-    }
-  ]
-}
-```
-
-## Evaluation & Metrics
-
-### Performance in External Validation
-![Comparison Figure](docs/scatter_plot_fig.png)
-*Comparison of CellViT models with different backbones based on detection quality, classification performance
-and model size confirm the superiority of pathology-specific encoders on external set.  The CellViT model with the H0-mini encoder emerges as the best trade-off, combining strong
-detection and classification performance with a compact architecture.*
-
-### Per-Cell-Type Performance
-![Comparison Figure](docs/comparison_metrics.png)
-*HistoTRAIN dataset enables the analysis of 13 cell types and HistoPLUS proposes a SOTA model for detecting and classifying them. Performances are computed via bootstrapping with 1,000 iterations. Statistical
-significance is indicated as follows: * P < 0.05, ** P < 1e-3; non-significant differences are labeled "n.s.". Double-sided p-values
-were computed using bootstrap resampling.*
-
-## Model Card / Responsible Use
-
-### Primary Use Cases
-
-- Research applications in tumor microenvironment analysis
-- Cell population quantification in H&E stained slides
-- Biomarker discovery and validation studies
-
-### Intended Users
-- Computational pathologists and researchers
-- Bioinformatics professionals
-- Clinical researchers (with appropriate validation)
-
-### Limitations
-
-- **H&E specific**: Trained exclusively on hematoxylin and eosin stained slides
-- **Human tissue**: Validated on human tissue samples only
-- **Research tool**: Not validated for clinical diagnosis
-
-### Bias and Fairness
-
-- **Dataset composition**: Training data includes samples from diverse institutions and demographics
-- **Cell type representation**: Some rare cell types have limited representation
-- **Technical bias**: Performance may vary with different scanners and staining protocols
-
-### Ethical Considerations
-
-- **Human oversight required**: Results should be validated by domain experts
-- **Privacy**: Ensure compliance with data protection regulations
-- **Transparency**: Model predictions include confidence scores for interpretation
-
-## Citing This Work
-
-If you use HistoPLUS in your research, please cite our work:
-
-```bibtex
-@misc{histoplus2025,
-  title        = {Towards Comprehensive Cellular Characterisation of H\&E Slides},
-  author       = {B. Adjadj, P.-A. Bannier, G. Horent, S. Mandela, A. Lyon, K. Schutte, U. Marteau, V. Gaury, L. Dumont, T. Mathieu, R. Belbahri, B. Schmauch, E. Durand, K. Von Loga, L. Gillet},
-  year         = {2025},
-  eprint       = {2508.09926},
-  archivePrefix= {arXiv},
-  primaryClass = {cs.CV},
-  doi          = {10.48550/arXiv.2508.09926},
-  url          = {https://arxiv.org/abs/2508.09926}
-}
-```
-
-## Contributing
-
-We welcome contributions to HistoPLUS! Please see our contributing guidelines for details.
-
-### Development Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/owkin/histoplus.git
-cd histoplus
-
-# Install development dependencies
-pip install -e ".[dev,testing,linting]"
-
-# Install pre-commit hooks
-pre-commit install
-
-# Run tests
-pytest tests/
-
-# Run linting
-ruff check histoplus/
-mypy histoplus/
-```
-
-### Guidelines
-
-- **Code Style**: We use Ruff for linting and formatting
-- **Testing**: Maintain >90% test coverage
-- **Documentation**: Update docs for all new features
-- **Type Hints**: All code should be fully typed
-
-### Reporting Issues
-
-- **Bug Reports**: Use the GitHub issue tracker
-- **Feature Requests**: Discuss in GitHub Discussions first
-- **Security Issues**: Email security@owkin.com
-
-## License & Authorship
-
-### License
-
-This project is licensed under the CC BY-NC-ND 4.0 License. See the [LICENSE](https://github.com/owkin/histoplus/docs/LICENSE.md) file for details.
+또한 일부 라이브러리(HF cache, HistoPLUS cache 등)는
+**홈 디렉토리 기반 경로를 기본값으로 사용**하기 때문에
+환경 변수 기반 제어가 중요합니다.
 
 ---
-<br>
 
-**🔬 Advancing computational pathology through robust, accessible AI tools.**
-For questions, support, or collaboration opportunities, please reach out via [GitHub Issues](https://github.com/owkin/histoplus/issues).
+## 2️⃣ `run.sh`의 역할
 
-## Acknowledgements
+`run.sh`는 단순한 `docker run` 래퍼가 아니라,
+**실험용 컨테이너 실행을 표준화하기 위한 스크립트**입니다.
 
-The present study was funded by Owkin.
+### ✔️ 주요 기능
 
-This study makes use of data generated by the
-MOSAIC consortium (Owkin; Charité – Universitätsmedizin Berlin (DE); Lausanne University
-Hospital - CHUV (CH); Universitätsklinikum Erlangen (DE); Institut Gustave Roussy (FR);
-University of Pittsburgh (USA)).
+* GPU 자동 활성화 (`--gpus all`)
+* 현재 작업 디렉토리(`$PWD`)를 컨테이너 작업 디렉토리로 설정
+* 호스트의 주요 경로를 **동일한 경로로 마운트**
+* 사용자 UID/GID 전달
+* 컨테이너 종료 시 자동 제거 (`--rm`)
+* 필요 시 컨테이너 이름 지정 가능
 
-This authors thank Dr Kathrina Alexander, Dr Audrey Caudron, Dr Richard Doughty,
-Dr Romain Dubois, Dr Thibaut Gioanni, Dr Camelia Radulescu, Dr Thomas Rialland,
-Dr Pierre Romero and Dr Yannis Roxanis for their contributions to HistoTRAIN and HistoVAL.
+---
+
+## 3️⃣ 기본 사용법
+
+```bash
+./run.sh <IMAGE_NAME>
+```
+
+예시:
+
+```bash
+./run.sh # 기본으로 hist:base가 설정되어있음
+./run.sh hist:base
+```
+
+* 컨테이너는 **현재 디렉토리 기준**으로 실행됩니다.
+* 컨테이너 이름은 Docker가 자동 생성합니다.
+
+---
+
+## 4️⃣ 컨테이너 이름 지정 (`--name` 옵션)
+
+여러 실험을 동시에 실행하거나
+`docker ps`에서 컨테이너를 명확히 식별하고 싶은 경우 사용합니다.
+
+```bash
+./run.sh <IMAGE_NAME> --name <CONTAINER_NAME>
+```
+
+예시:
+
+```bash
+./run.sh hist:base --name histoplus-seg
+```
+
+> ⚠️ 동일한 이름의 컨테이너가 이미 존재하면 실행이 실패합니다.
+> 필요 시 기존 컨테이너를 먼저 제거하십시오.
+
+```bash
+docker rm -f histoplus-seg
+```
+
+---
+
+## 5️⃣ 자동 마운트되는 경로
+
+아래 호스트 경로들은 **동일한 경로로 컨테이너에 마운트**됩니다.
+
+* 현재 작업 디렉토리 (`$PWD`)
+* `/home`
+* `/data`
+* `/home/nas2_fast`
+
+> ❗ 해당 경로가 호스트에 존재하지 않으면 실행이 중단됩니다.
+
+이 설계를 통해:
+
+* 코드 내 경로 수정 없이 서버 이동 가능
+* NAS / 공용 데이터 접근 시 경로 불일치 문제 방지
+
+---
+
+## 6️⃣ Docker 이미지에 대한 중요 안내 ⚠️
+
+⚠️ **본 Docker 이미지는 “세그멘테이션/추론 중심” 환경입니다.**
+
+* Cell segmentation, inference, feature extraction을 주 용도로 설계됨
+* 다음과 같은 패키지는 **포함되어 있지 않거나 제한적일 수 있습니다**:
+
+  * 데이터 분석/시각화용 라이브러리
+  * 일부 통계/ML 패키지
+  * 학습(training) 전용 프레임워크
+
+👉 **추가 패키지가 필요한 경우**
+
+* 별도 이미지 빌드
+* 또는 컨테이너 내부에서 임시 설치 후 사용
+
+을 권장합니다.
+
+---
+
+## 7️⃣ 권장 사용 패턴
+
+* **세그멘테이션 / 추론 작업**
+  → 본 Docker + `run.sh` 사용
+* **분석 / 시각화 / 실험적 코드**
+  → 별도 환경 또는 확장 이미지 권장
+* **여러 실험 병렬 실행**
+  → `--name` 옵션으로 컨테이너 구분
+
+---
+
+## 8️⃣ 문제 발생 시 체크리스트
+
+1. `docker ps`에서 컨테이너가 실행 중인지
+2. 컨테이너 이름 충돌 여부 (`--name` 사용 시)
+3. 마운트 경로가 호스트에 실제로 존재하는지
+4. GPU 인식 여부 (`nvidia-smi`)
+5. 필요한 패키지가 이미지에 포함되어 있는지
+
+---
+
+### 📌 요약
+
+* `run.sh`는 **실험 환경 표준화용 실행 스크립트**
+* ENV 설정은 **경로/권한/캐시 문제를 피하기 위한 필수 설계**
+* Docker 이미지는 **세그멘테이션 중심**, 범용 개발 환경이 아님
+
