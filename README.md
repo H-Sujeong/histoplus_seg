@@ -155,3 +155,43 @@ docker rm -f histoplus-seg
 * ENV 설정은 **경로/권한/캐시 문제를 피하기 위한 필수 설계**
 * Docker 이미지는 **세그멘테이션 중심**, 범용 개발 환경이 아님
 
+---
+
+9️⃣ Pretrained Weights 안내 (중요)
+
+본 Docker/run.sh 환경에서 사용하는 HistoPLUS pretrained weights는 별도 위치에 제공됩니다.
+
+📦 Weights 위치
+
+가중치 다운로드 및 공유 링크:
+👉 [Drive](https://drive.google.com/drive/folders/1xKRdjDWwouGoInnaV_EltAGyw3684euT?usp=drive_link)
+
+해당 링크에는:
+
+HistoPLUS용 pretrained weight 파일
+
+Hugging Face cache 구조를 유지한 아카이브
+
+무결성(symlink) 확인 방법
+
+이 포함되어 있습니다.
+
+📖 사용 방법
+
+가중치의 압축 해제, 배치 위치, 무결성 체크, cache 경로 설정 방법은
+아래 링크에 포함된 README를 반드시 참고하십시오.
+
+👉 관련 사용 방법은 위 링크 내 README를 참고하세요.
+
+본 프로젝트 README에서는 가중치 사용에 대한 중복 설명을 하지 않습니다.
+
+⚠️ 주의 사항
+
+가중치는 Hugging Face cache 구조(blobs / snapshots / refs)를 전제로 합니다.
+
+심볼릭 링크가 깨진 경우 정상 동작하지 않을 수 있습니다.
+
+가중치 관련 문제 발생 시:
+
+링크 내 README의 무결성 체크 섹션
+
