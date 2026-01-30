@@ -1,0 +1,1127 @@
+<?xml version="1.0" ?>
+<ASAP_Annotations>
+  <!--ROI: x0=0, y0=0, width=10986, height=12760-->
+  <Annotations>
+    <Annotation Name="Cancer cell_0" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="2717" Y="8"/>
+        <Coordinate Order="1" X="2738" Y="8"/>
+        <Coordinate Order="2" X="2738" Y="29"/>
+        <Coordinate Order="3" X="2717" Y="29"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_1" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="7296" Y="1357"/>
+        <Coordinate Order="1" X="7306" Y="1357"/>
+        <Coordinate Order="2" X="7306" Y="1364"/>
+        <Coordinate Order="3" X="7296" Y="1364"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_2" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="7291" Y="1360"/>
+        <Coordinate Order="1" X="7295" Y="1360"/>
+        <Coordinate Order="2" X="7295" Y="1365"/>
+        <Coordinate Order="3" X="7291" Y="1365"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_3" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="7270" Y="1358"/>
+        <Coordinate Order="1" X="7422" Y="1358"/>
+        <Coordinate Order="2" X="7422" Y="1437"/>
+        <Coordinate Order="3" X="7270" Y="1437"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_4" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="7397" Y="1426"/>
+        <Coordinate Order="1" X="7422" Y="1426"/>
+        <Coordinate Order="2" X="7422" Y="1442"/>
+        <Coordinate Order="3" X="7397" Y="1442"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_5" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="7270" Y="1399"/>
+        <Coordinate Order="1" X="7280" Y="1399"/>
+        <Coordinate Order="2" X="7280" Y="1406"/>
+        <Coordinate Order="3" X="7270" Y="1406"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_6" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="7173" Y="1425"/>
+        <Coordinate Order="1" X="7184" Y="1425"/>
+        <Coordinate Order="2" X="7184" Y="1438"/>
+        <Coordinate Order="3" X="7173" Y="1438"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_7" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9550" Y="59"/>
+        <Coordinate Order="1" X="9594" Y="59"/>
+        <Coordinate Order="2" X="9594" Y="95"/>
+        <Coordinate Order="3" X="9550" Y="95"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_8" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9602" Y="95"/>
+        <Coordinate Order="1" X="9618" Y="95"/>
+        <Coordinate Order="2" X="9618" Y="111"/>
+        <Coordinate Order="3" X="9602" Y="111"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_9" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9446" Y="198"/>
+        <Coordinate Order="1" X="9550" Y="198"/>
+        <Coordinate Order="2" X="9550" Y="315"/>
+        <Coordinate Order="3" X="9446" Y="315"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_10" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9418" Y="311"/>
+        <Coordinate Order="1" X="9498" Y="311"/>
+        <Coordinate Order="2" X="9498" Y="390"/>
+        <Coordinate Order="3" X="9418" Y="390"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_11" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9511" Y="360"/>
+        <Coordinate Order="1" X="9555" Y="360"/>
+        <Coordinate Order="2" X="9555" Y="402"/>
+        <Coordinate Order="3" X="9511" Y="402"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_12" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9548" Y="383"/>
+        <Coordinate Order="1" X="9594" Y="383"/>
+        <Coordinate Order="2" X="9594" Y="431"/>
+        <Coordinate Order="3" X="9548" Y="431"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_13" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9707" Y="25"/>
+        <Coordinate Order="1" X="9722" Y="25"/>
+        <Coordinate Order="2" X="9722" Y="58"/>
+        <Coordinate Order="3" X="9707" Y="58"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_14" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9603" Y="-26"/>
+        <Coordinate Order="1" X="9682" Y="-26"/>
+        <Coordinate Order="2" X="9682" Y="96"/>
+        <Coordinate Order="3" X="9603" Y="96"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_15" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9625" Y="241"/>
+        <Coordinate Order="1" X="9704" Y="241"/>
+        <Coordinate Order="2" X="9704" Y="303"/>
+        <Coordinate Order="3" X="9625" Y="303"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_16" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="9581" Y="286"/>
+        <Coordinate Order="1" X="9669" Y="286"/>
+        <Coordinate Order="2" X="9669" Y="360"/>
+        <Coordinate Order="3" X="9581" Y="360"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_17" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="8775" Y="1846"/>
+        <Coordinate Order="1" X="8802" Y="1846"/>
+        <Coordinate Order="2" X="8802" Y="1902"/>
+        <Coordinate Order="3" X="8775" Y="1902"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_18" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="8662" Y="1884"/>
+        <Coordinate Order="1" X="8756" Y="1884"/>
+        <Coordinate Order="2" X="8756" Y="1902"/>
+        <Coordinate Order="3" X="8662" Y="1902"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_19" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="8747" Y="1796"/>
+        <Coordinate Order="1" X="8788" Y="1796"/>
+        <Coordinate Order="2" X="8788" Y="1821"/>
+        <Coordinate Order="3" X="8747" Y="1821"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_20" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="8490" Y="1834"/>
+        <Coordinate Order="1" X="8538" Y="1834"/>
+        <Coordinate Order="2" X="8538" Y="1866"/>
+        <Coordinate Order="3" X="8490" Y="1866"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_21" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="8609" Y="1848"/>
+        <Coordinate Order="1" X="8642" Y="1848"/>
+        <Coordinate Order="2" X="8642" Y="1893"/>
+        <Coordinate Order="3" X="8609" Y="1893"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_22" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="8686" Y="1853"/>
+        <Coordinate Order="1" X="8724" Y="1853"/>
+        <Coordinate Order="2" X="8724" Y="1880"/>
+        <Coordinate Order="3" X="8686" Y="1880"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_23" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5444" Y="5"/>
+        <Coordinate Order="1" X="5494" Y="5"/>
+        <Coordinate Order="2" X="5494" Y="59"/>
+        <Coordinate Order="3" X="5444" Y="59"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_24" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5451" Y="52"/>
+        <Coordinate Order="1" X="5467" Y="52"/>
+        <Coordinate Order="2" X="5467" Y="64"/>
+        <Coordinate Order="3" X="5451" Y="64"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_25" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5444" Y="59"/>
+        <Coordinate Order="1" X="5453" Y="59"/>
+        <Coordinate Order="2" X="5453" Y="63"/>
+        <Coordinate Order="3" X="5444" Y="63"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_26" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5465" Y="73"/>
+        <Coordinate Order="1" X="5484" Y="73"/>
+        <Coordinate Order="2" X="5484" Y="85"/>
+        <Coordinate Order="3" X="5465" Y="85"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_27" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5409" Y="380"/>
+        <Coordinate Order="1" X="5426" Y="380"/>
+        <Coordinate Order="2" X="5426" Y="392"/>
+        <Coordinate Order="3" X="5409" Y="392"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_28" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5545" Y="51"/>
+        <Coordinate Order="1" X="5571" Y="51"/>
+        <Coordinate Order="2" X="5571" Y="70"/>
+        <Coordinate Order="3" X="5545" Y="70"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_29" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5686" Y="169"/>
+        <Coordinate Order="1" X="5721" Y="169"/>
+        <Coordinate Order="2" X="5721" Y="188"/>
+        <Coordinate Order="3" X="5686" Y="188"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_30" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5756" Y="176"/>
+        <Coordinate Order="1" X="5815" Y="176"/>
+        <Coordinate Order="2" X="5815" Y="211"/>
+        <Coordinate Order="3" X="5756" Y="211"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_31" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5612" Y="180"/>
+        <Coordinate Order="1" X="5678" Y="180"/>
+        <Coordinate Order="2" X="5678" Y="211"/>
+        <Coordinate Order="3" X="5612" Y="211"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_32" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5812" Y="186"/>
+        <Coordinate Order="1" X="5833" Y="186"/>
+        <Coordinate Order="2" X="5833" Y="206"/>
+        <Coordinate Order="3" X="5812" Y="206"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_33" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5598" Y="222"/>
+        <Coordinate Order="1" X="5639" Y="222"/>
+        <Coordinate Order="2" X="5639" Y="253"/>
+        <Coordinate Order="3" X="5598" Y="253"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_34" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5569" Y="240"/>
+        <Coordinate Order="1" X="5592" Y="240"/>
+        <Coordinate Order="2" X="5592" Y="270"/>
+        <Coordinate Order="3" X="5569" Y="270"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_35" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5676" Y="240"/>
+        <Coordinate Order="1" X="5757" Y="240"/>
+        <Coordinate Order="2" X="5757" Y="324"/>
+        <Coordinate Order="3" X="5676" Y="324"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_36" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5723" Y="245"/>
+        <Coordinate Order="1" X="5736" Y="245"/>
+        <Coordinate Order="2" X="5736" Y="253"/>
+        <Coordinate Order="3" X="5723" Y="253"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_37" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5736" Y="245"/>
+        <Coordinate Order="1" X="5762" Y="245"/>
+        <Coordinate Order="2" X="5762" Y="271"/>
+        <Coordinate Order="3" X="5736" Y="271"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_38" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5676" Y="255"/>
+        <Coordinate Order="1" X="5691" Y="255"/>
+        <Coordinate Order="2" X="5691" Y="268"/>
+        <Coordinate Order="3" X="5676" Y="268"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_39" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5555" Y="260"/>
+        <Coordinate Order="1" X="5572" Y="260"/>
+        <Coordinate Order="2" X="5572" Y="283"/>
+        <Coordinate Order="3" X="5555" Y="283"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_40" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5782" Y="265"/>
+        <Coordinate Order="1" X="5805" Y="265"/>
+        <Coordinate Order="2" X="5805" Y="318"/>
+        <Coordinate Order="3" X="5782" Y="318"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_41" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5799" Y="267"/>
+        <Coordinate Order="1" X="5818" Y="267"/>
+        <Coordinate Order="2" X="5818" Y="313"/>
+        <Coordinate Order="3" X="5799" Y="313"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_42" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5595" Y="274"/>
+        <Coordinate Order="1" X="5619" Y="274"/>
+        <Coordinate Order="2" X="5619" Y="300"/>
+        <Coordinate Order="3" X="5595" Y="300"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_43" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5533" Y="279"/>
+        <Coordinate Order="1" X="5563" Y="279"/>
+        <Coordinate Order="2" X="5563" Y="297"/>
+        <Coordinate Order="3" X="5533" Y="297"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_44" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5530" Y="298"/>
+        <Coordinate Order="1" X="5561" Y="298"/>
+        <Coordinate Order="2" X="5561" Y="353"/>
+        <Coordinate Order="3" X="5530" Y="353"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_45" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5699" Y="332"/>
+        <Coordinate Order="1" X="5765" Y="332"/>
+        <Coordinate Order="2" X="5765" Y="379"/>
+        <Coordinate Order="3" X="5699" Y="379"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_46" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5597" Y="341"/>
+        <Coordinate Order="1" X="5675" Y="341"/>
+        <Coordinate Order="2" X="5675" Y="418"/>
+        <Coordinate Order="3" X="5597" Y="418"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_47" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5571" Y="352"/>
+        <Coordinate Order="1" X="5598" Y="352"/>
+        <Coordinate Order="2" X="5598" Y="386"/>
+        <Coordinate Order="3" X="5571" Y="386"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_48" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="5473" Y="198"/>
+        <Coordinate Order="1" X="5553" Y="198"/>
+        <Coordinate Order="2" X="5553" Y="275"/>
+        <Coordinate Order="3" X="5473" Y="275"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_49" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="4081" Y="4053"/>
+        <Coordinate Order="1" X="4094" Y="4053"/>
+        <Coordinate Order="2" X="4094" Y="4081"/>
+        <Coordinate Order="3" X="4081" Y="4081"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_50" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="4043" Y="4055"/>
+        <Coordinate Order="1" X="4068" Y="4055"/>
+        <Coordinate Order="2" X="4068" Y="4077"/>
+        <Coordinate Order="3" X="4043" Y="4077"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_51" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="4132" Y="4177"/>
+        <Coordinate Order="1" X="4161" Y="4177"/>
+        <Coordinate Order="2" X="4161" Y="4202"/>
+        <Coordinate Order="3" X="4132" Y="4202"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_52" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="4104" Y="4024"/>
+        <Coordinate Order="1" X="4145" Y="4024"/>
+        <Coordinate Order="2" X="4145" Y="4055"/>
+        <Coordinate Order="3" X="4104" Y="4055"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_53" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="4153" Y="4036"/>
+        <Coordinate Order="1" X="4168" Y="4036"/>
+        <Coordinate Order="2" X="4168" Y="4056"/>
+        <Coordinate Order="3" X="4153" Y="4056"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_54" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="4174" Y="4040"/>
+        <Coordinate Order="1" X="4192" Y="4040"/>
+        <Coordinate Order="2" X="4192" Y="4064"/>
+        <Coordinate Order="3" X="4174" Y="4064"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_55" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="4152" Y="4063"/>
+        <Coordinate Order="1" X="4183" Y="4063"/>
+        <Coordinate Order="2" X="4183" Y="4078"/>
+        <Coordinate Order="3" X="4152" Y="4078"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_56" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="4167" Y="4146"/>
+        <Coordinate Order="1" X="4196" Y="4146"/>
+        <Coordinate Order="2" X="4196" Y="4179"/>
+        <Coordinate Order="3" X="4167" Y="4179"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_57" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10356" Y="6734"/>
+        <Coordinate Order="1" X="10376" Y="6734"/>
+        <Coordinate Order="2" X="10376" Y="6766"/>
+        <Coordinate Order="3" X="10356" Y="6766"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_58" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10327" Y="6773"/>
+        <Coordinate Order="1" X="10348" Y="6773"/>
+        <Coordinate Order="2" X="10348" Y="6793"/>
+        <Coordinate Order="3" X="10327" Y="6793"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_59" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10281" Y="6812"/>
+        <Coordinate Order="1" X="10360" Y="6812"/>
+        <Coordinate Order="2" X="10360" Y="6896"/>
+        <Coordinate Order="3" X="10281" Y="6896"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_60" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10630" Y="6885"/>
+        <Coordinate Order="1" X="10642" Y="6885"/>
+        <Coordinate Order="2" X="10642" Y="6917"/>
+        <Coordinate Order="3" X="10630" Y="6917"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_61" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10335" Y="6903"/>
+        <Coordinate Order="1" X="10427" Y="6903"/>
+        <Coordinate Order="2" X="10427" Y="6962"/>
+        <Coordinate Order="3" X="10335" Y="6962"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_62" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10551" Y="6904"/>
+        <Coordinate Order="1" X="10634" Y="6904"/>
+        <Coordinate Order="2" X="10634" Y="6962"/>
+        <Coordinate Order="3" X="10551" Y="6962"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_63" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10514" Y="6921"/>
+        <Coordinate Order="1" X="10552" Y="6921"/>
+        <Coordinate Order="2" X="10552" Y="6962"/>
+        <Coordinate Order="3" X="10514" Y="6962"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_64" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10503" Y="6874"/>
+        <Coordinate Order="1" X="10566" Y="6874"/>
+        <Coordinate Order="2" X="10566" Y="6916"/>
+        <Coordinate Order="3" X="10503" Y="6916"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Cancer cell_65" Type="Polygon" PartOfGroup="Cancer cell" Color="#8B0000">
+      <Coordinates>
+        <Coordinate Order="0" X="10419" Y="6877"/>
+        <Coordinate Order="1" X="10510" Y="6877"/>
+        <Coordinate Order="2" X="10510" Y="6944"/>
+        <Coordinate Order="3" X="10419" Y="6944"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_66" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2727" Y="106"/>
+        <Coordinate Order="1" X="2751" Y="106"/>
+        <Coordinate Order="2" X="2751" Y="136"/>
+        <Coordinate Order="3" X="2727" Y="136"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_67" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2704" Y="157"/>
+        <Coordinate Order="1" X="2714" Y="157"/>
+        <Coordinate Order="2" X="2714" Y="178"/>
+        <Coordinate Order="3" X="2704" Y="178"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_68" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2735" Y="246"/>
+        <Coordinate Order="1" X="2756" Y="246"/>
+        <Coordinate Order="2" X="2756" Y="263"/>
+        <Coordinate Order="3" X="2735" Y="263"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_69" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2710" Y="281"/>
+        <Coordinate Order="1" X="2728" Y="281"/>
+        <Coordinate Order="2" X="2728" Y="305"/>
+        <Coordinate Order="3" X="2710" Y="305"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_70" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2718" Y="317"/>
+        <Coordinate Order="1" X="2734" Y="317"/>
+        <Coordinate Order="2" X="2734" Y="338"/>
+        <Coordinate Order="3" X="2718" Y="338"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_71" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2701" Y="342"/>
+        <Coordinate Order="1" X="2720" Y="342"/>
+        <Coordinate Order="2" X="2720" Y="381"/>
+        <Coordinate Order="3" X="2701" Y="381"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_72" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2686" Y="382"/>
+        <Coordinate Order="1" X="2701" Y="382"/>
+        <Coordinate Order="2" X="2701" Y="412"/>
+        <Coordinate Order="3" X="2686" Y="412"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_73" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2789" Y="16"/>
+        <Coordinate Order="1" X="2822" Y="16"/>
+        <Coordinate Order="2" X="2822" Y="59"/>
+        <Coordinate Order="3" X="2789" Y="59"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_74" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2760" Y="119"/>
+        <Coordinate Order="1" X="2775" Y="119"/>
+        <Coordinate Order="2" X="2775" Y="149"/>
+        <Coordinate Order="3" X="2760" Y="149"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_75" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2758" Y="175"/>
+        <Coordinate Order="1" X="2775" Y="175"/>
+        <Coordinate Order="2" X="2775" Y="200"/>
+        <Coordinate Order="3" X="2758" Y="200"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_76" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2786" Y="182"/>
+        <Coordinate Order="1" X="2814" Y="182"/>
+        <Coordinate Order="2" X="2814" Y="218"/>
+        <Coordinate Order="3" X="2786" Y="218"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_77" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2768" Y="217"/>
+        <Coordinate Order="1" X="2777" Y="217"/>
+        <Coordinate Order="2" X="2777" Y="231"/>
+        <Coordinate Order="3" X="2768" Y="231"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_78" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="2760" Y="249"/>
+        <Coordinate Order="1" X="2782" Y="249"/>
+        <Coordinate Order="2" X="2782" Y="284"/>
+        <Coordinate Order="3" X="2760" Y="284"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_79" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="4171" Y="447"/>
+        <Coordinate Order="1" X="4192" Y="447"/>
+        <Coordinate Order="2" X="4192" Y="456"/>
+        <Coordinate Order="3" X="4171" Y="456"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_80" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="9470" Y="73"/>
+        <Coordinate Order="1" X="9492" Y="73"/>
+        <Coordinate Order="2" X="9492" Y="90"/>
+        <Coordinate Order="3" X="9470" Y="90"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_81" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="9398" Y="416"/>
+        <Coordinate Order="1" X="9427" Y="416"/>
+        <Coordinate Order="2" X="9427" Y="428"/>
+        <Coordinate Order="3" X="9398" Y="428"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_82" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5361" Y="1347"/>
+        <Coordinate Order="1" X="5405" Y="1347"/>
+        <Coordinate Order="2" X="5405" Y="1376"/>
+        <Coordinate Order="3" X="5361" Y="1376"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_83" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5468" Y="1347"/>
+        <Coordinate Order="1" X="5497" Y="1347"/>
+        <Coordinate Order="2" X="5497" Y="1375"/>
+        <Coordinate Order="3" X="5468" Y="1375"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_84" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5542" Y="1387"/>
+        <Coordinate Order="1" X="5577" Y="1387"/>
+        <Coordinate Order="2" X="5577" Y="1418"/>
+        <Coordinate Order="3" X="5542" Y="1418"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_85" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5468" Y="1402"/>
+        <Coordinate Order="1" X="5488" Y="1402"/>
+        <Coordinate Order="2" X="5488" Y="1424"/>
+        <Coordinate Order="3" X="5468" Y="1424"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_86" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5371" Y="112"/>
+        <Coordinate Order="1" X="5390" Y="112"/>
+        <Coordinate Order="2" X="5390" Y="130"/>
+        <Coordinate Order="3" X="5371" Y="130"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_87" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5407" Y="135"/>
+        <Coordinate Order="1" X="5425" Y="135"/>
+        <Coordinate Order="2" X="5425" Y="153"/>
+        <Coordinate Order="3" X="5407" Y="153"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_88" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5376" Y="180"/>
+        <Coordinate Order="1" X="5397" Y="180"/>
+        <Coordinate Order="2" X="5397" Y="189"/>
+        <Coordinate Order="3" X="5376" Y="189"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_89" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5416" Y="232"/>
+        <Coordinate Order="1" X="5457" Y="232"/>
+        <Coordinate Order="2" X="5457" Y="258"/>
+        <Coordinate Order="3" X="5416" Y="258"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_90" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5420" Y="305"/>
+        <Coordinate Order="1" X="5437" Y="305"/>
+        <Coordinate Order="2" X="5437" Y="317"/>
+        <Coordinate Order="3" X="5420" Y="317"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_91" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5359" Y="309"/>
+        <Coordinate Order="1" X="5391" Y="309"/>
+        <Coordinate Order="2" X="5391" Y="329"/>
+        <Coordinate Order="3" X="5359" Y="329"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_92" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5448" Y="355"/>
+        <Coordinate Order="1" X="5474" Y="355"/>
+        <Coordinate Order="2" X="5474" Y="379"/>
+        <Coordinate Order="3" X="5448" Y="379"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_93" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5459" Y="393"/>
+        <Coordinate Order="1" X="5512" Y="393"/>
+        <Coordinate Order="2" X="5512" Y="450"/>
+        <Coordinate Order="3" X="5459" Y="450"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_94" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5673" Y="48"/>
+        <Coordinate Order="1" X="5707" Y="48"/>
+        <Coordinate Order="2" X="5707" Y="77"/>
+        <Coordinate Order="3" X="5673" Y="77"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_95" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5737" Y="51"/>
+        <Coordinate Order="1" X="5760" Y="51"/>
+        <Coordinate Order="2" X="5760" Y="71"/>
+        <Coordinate Order="3" X="5737" Y="71"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_96" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5806" Y="64"/>
+        <Coordinate Order="1" X="5833" Y="64"/>
+        <Coordinate Order="2" X="5833" Y="83"/>
+        <Coordinate Order="3" X="5806" Y="83"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_97" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5799" Y="83"/>
+        <Coordinate Order="1" X="5812" Y="83"/>
+        <Coordinate Order="2" X="5812" Y="94"/>
+        <Coordinate Order="3" X="5799" Y="94"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_98" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5663" Y="91"/>
+        <Coordinate Order="1" X="5700" Y="91"/>
+        <Coordinate Order="2" X="5700" Y="105"/>
+        <Coordinate Order="3" X="5663" Y="105"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_99" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5697" Y="114"/>
+        <Coordinate Order="1" X="5746" Y="114"/>
+        <Coordinate Order="2" X="5746" Y="142"/>
+        <Coordinate Order="3" X="5697" Y="142"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_100" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5807" Y="114"/>
+        <Coordinate Order="1" X="5828" Y="114"/>
+        <Coordinate Order="2" X="5828" Y="132"/>
+        <Coordinate Order="3" X="5807" Y="132"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_101" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5621" Y="146"/>
+        <Coordinate Order="1" X="5628" Y="146"/>
+        <Coordinate Order="2" X="5628" Y="153"/>
+        <Coordinate Order="3" X="5621" Y="153"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_102" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5581" Y="154"/>
+        <Coordinate Order="1" X="5610" Y="154"/>
+        <Coordinate Order="2" X="5610" Y="172"/>
+        <Coordinate Order="3" X="5581" Y="172"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_103" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5604" Y="173"/>
+        <Coordinate Order="1" X="5617" Y="173"/>
+        <Coordinate Order="2" X="5617" Y="190"/>
+        <Coordinate Order="3" X="5604" Y="190"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_104" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5784" Y="340"/>
+        <Coordinate Order="1" X="5818" Y="340"/>
+        <Coordinate Order="2" X="5818" Y="364"/>
+        <Coordinate Order="3" X="5784" Y="364"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_105" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5806" Y="391"/>
+        <Coordinate Order="1" X="5826" Y="391"/>
+        <Coordinate Order="2" X="5826" Y="409"/>
+        <Coordinate Order="3" X="5806" Y="409"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_106" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5775" Y="405"/>
+        <Coordinate Order="1" X="5807" Y="405"/>
+        <Coordinate Order="2" X="5807" Y="425"/>
+        <Coordinate Order="3" X="5775" Y="425"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_107" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5781" Y="439"/>
+        <Coordinate Order="1" X="5802" Y="439"/>
+        <Coordinate Order="2" X="5802" Y="454"/>
+        <Coordinate Order="3" X="5781" Y="454"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_108" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5504" Y="137"/>
+        <Coordinate Order="1" X="5531" Y="137"/>
+        <Coordinate Order="2" X="5531" Y="158"/>
+        <Coordinate Order="3" X="5504" Y="158"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_109" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="5461" Y="162"/>
+        <Coordinate Order="1" X="5481" Y="162"/>
+        <Coordinate Order="2" X="5481" Y="181"/>
+        <Coordinate Order="3" X="5461" Y="181"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_110" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="4075" Y="4101"/>
+        <Coordinate Order="1" X="4091" Y="4101"/>
+        <Coordinate Order="2" X="4091" Y="4116"/>
+        <Coordinate Order="3" X="4075" Y="4116"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_111" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="4111" Y="4099"/>
+        <Coordinate Order="1" X="4141" Y="4099"/>
+        <Coordinate Order="2" X="4141" Y="4115"/>
+        <Coordinate Order="3" X="4111" Y="4115"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_112" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10388" Y="6741"/>
+        <Coordinate Order="1" X="10403" Y="6741"/>
+        <Coordinate Order="2" X="10403" Y="6765"/>
+        <Coordinate Order="3" X="10388" Y="6765"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_113" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10415" Y="6757"/>
+        <Coordinate Order="1" X="10438" Y="6757"/>
+        <Coordinate Order="2" X="10438" Y="6794"/>
+        <Coordinate Order="3" X="10415" Y="6794"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_114" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10457" Y="6755"/>
+        <Coordinate Order="1" X="10477" Y="6755"/>
+        <Coordinate Order="2" X="10477" Y="6783"/>
+        <Coordinate Order="3" X="10457" Y="6783"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_115" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10508" Y="6771"/>
+        <Coordinate Order="1" X="10525" Y="6771"/>
+        <Coordinate Order="2" X="10525" Y="6792"/>
+        <Coordinate Order="3" X="10508" Y="6792"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_116" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10448" Y="6782"/>
+        <Coordinate Order="1" X="10464" Y="6782"/>
+        <Coordinate Order="2" X="10464" Y="6804"/>
+        <Coordinate Order="3" X="10448" Y="6804"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_117" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10472" Y="6788"/>
+        <Coordinate Order="1" X="10487" Y="6788"/>
+        <Coordinate Order="2" X="10487" Y="6817"/>
+        <Coordinate Order="3" X="10472" Y="6817"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_118" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10435" Y="6797"/>
+        <Coordinate Order="1" X="10447" Y="6797"/>
+        <Coordinate Order="2" X="10447" Y="6813"/>
+        <Coordinate Order="3" X="10435" Y="6813"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_119" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10390" Y="6813"/>
+        <Coordinate Order="1" X="10411" Y="6813"/>
+        <Coordinate Order="2" X="10411" Y="6843"/>
+        <Coordinate Order="3" X="10390" Y="6843"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Fibroblasts_120" Type="Polygon" PartOfGroup="Fibroblasts" Color="#1F3A93">
+      <Coordinates>
+        <Coordinate Order="0" X="10585" Y="6729"/>
+        <Coordinate Order="1" X="10598" Y="6729"/>
+        <Coordinate Order="2" X="10598" Y="6749"/>
+        <Coordinate Order="3" X="10585" Y="6749"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_121" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="2722" Y="437"/>
+        <Coordinate Order="1" X="2738" Y="437"/>
+        <Coordinate Order="2" X="2738" Y="456"/>
+        <Coordinate Order="3" X="2722" Y="456"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_122" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="2785" Y="380"/>
+        <Coordinate Order="1" X="2802" Y="380"/>
+        <Coordinate Order="2" X="2802" Y="396"/>
+        <Coordinate Order="3" X="2785" Y="396"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_123" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="2770" Y="432"/>
+        <Coordinate Order="1" X="2786" Y="432"/>
+        <Coordinate Order="2" X="2786" Y="453"/>
+        <Coordinate Order="3" X="2770" Y="453"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_124" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="9429" Y="428"/>
+        <Coordinate Order="1" X="9458" Y="428"/>
+        <Coordinate Order="2" X="9458" Y="446"/>
+        <Coordinate Order="3" X="9429" Y="446"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_125" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="5384" Y="419"/>
+        <Coordinate Order="1" X="5407" Y="419"/>
+        <Coordinate Order="2" X="5407" Y="439"/>
+        <Coordinate Order="3" X="5384" Y="439"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_126" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="5779" Y="13"/>
+        <Coordinate Order="1" X="5811" Y="13"/>
+        <Coordinate Order="2" X="5811" Y="28"/>
+        <Coordinate Order="3" X="5779" Y="28"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_127" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="5716" Y="32"/>
+        <Coordinate Order="1" X="5731" Y="32"/>
+        <Coordinate Order="2" X="5731" Y="48"/>
+        <Coordinate Order="3" X="5716" Y="48"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_128" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="5800" Y="37"/>
+        <Coordinate Order="1" X="5816" Y="37"/>
+        <Coordinate Order="2" X="5816" Y="53"/>
+        <Coordinate Order="3" X="5800" Y="53"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_129" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="5747" Y="66"/>
+        <Coordinate Order="1" X="5760" Y="66"/>
+        <Coordinate Order="2" X="5760" Y="87"/>
+        <Coordinate Order="3" X="5747" Y="87"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_130" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="5768" Y="69"/>
+        <Coordinate Order="1" X="5780" Y="69"/>
+        <Coordinate Order="2" X="5780" Y="79"/>
+        <Coordinate Order="3" X="5768" Y="79"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_131" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="5762" Y="82"/>
+        <Coordinate Order="1" X="5780" Y="82"/>
+        <Coordinate Order="2" X="5780" Y="99"/>
+        <Coordinate Order="3" X="5762" Y="99"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Lymphocytes_132" Type="Polygon" PartOfGroup="Lymphocytes" Color="#00BFCF">
+      <Coordinates>
+        <Coordinate Order="0" X="5668" Y="123"/>
+        <Coordinate Order="1" X="5689" Y="123"/>
+        <Coordinate Order="2" X="5689" Y="142"/>
+        <Coordinate Order="3" X="5668" Y="142"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Plasmocytes_133" Type="Polygon" PartOfGroup="Plasmocytes" Color="#B19CD9">
+      <Coordinates>
+        <Coordinate Order="0" X="2778" Y="410"/>
+        <Coordinate Order="1" X="2797" Y="410"/>
+        <Coordinate Order="2" X="2797" Y="431"/>
+        <Coordinate Order="3" X="2778" Y="431"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Minor Stromal Cell_134" Type="Polygon" PartOfGroup="Minor Stromal Cell" Color="#C49A6C">
+      <Coordinates>
+        <Coordinate Order="0" X="9399" Y="91"/>
+        <Coordinate Order="1" X="9428" Y="91"/>
+        <Coordinate Order="2" X="9428" Y="109"/>
+        <Coordinate Order="3" X="9399" Y="109"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Minor Stromal Cell_135" Type="Polygon" PartOfGroup="Minor Stromal Cell" Color="#C49A6C">
+      <Coordinates>
+        <Coordinate Order="0" X="5424" Y="1386"/>
+        <Coordinate Order="1" X="5447" Y="1386"/>
+        <Coordinate Order="2" X="5447" Y="1410"/>
+        <Coordinate Order="3" X="5424" Y="1410"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Minor Stromal Cell_136" Type="Polygon" PartOfGroup="Minor Stromal Cell" Color="#C49A6C">
+      <Coordinates>
+        <Coordinate Order="0" X="8642" Y="1806"/>
+        <Coordinate Order="1" X="8668" Y="1806"/>
+        <Coordinate Order="2" X="8668" Y="1823"/>
+        <Coordinate Order="3" X="8642" Y="1823"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Muscle Cell_137" Type="Polygon" PartOfGroup="Muscle Cell" Color="#003366">
+      <Coordinates>
+        <Coordinate Order="0" X="5432" Y="1344"/>
+        <Coordinate Order="1" X="5451" Y="1344"/>
+        <Coordinate Order="2" X="5451" Y="1366"/>
+        <Coordinate Order="3" X="5432" Y="1366"/>
+      </Coordinates>
+    </Annotation>
+    <Annotation Name="Macrophages_138" Type="Polygon" PartOfGroup="Macrophages" Color="#4DAF4A">
+      <Coordinates>
+        <Coordinate Order="0" X="5559" Y="1425"/>
+        <Coordinate Order="1" X="5582" Y="1425"/>
+        <Coordinate Order="2" X="5582" Y="1442"/>
+        <Coordinate Order="3" X="5559" Y="1442"/>
+      </Coordinates>
+    </Annotation>
+  </Annotations>
+  <AnnotationGroups>
+    <Group Name="Cancer cell" PartOfGroup="None" Color="#8B0000"/>
+    <Group Name="Fibroblasts" PartOfGroup="None" Color="#1F3A93"/>
+    <Group Name="Lymphocytes" PartOfGroup="None" Color="#00BFCF"/>
+    <Group Name="Plasmocytes" PartOfGroup="None" Color="#B19CD9"/>
+    <Group Name="Minor Stromal Cell" PartOfGroup="None" Color="#C49A6C"/>
+    <Group Name="Muscle Cell" PartOfGroup="None" Color="#003366"/>
+    <Group Name="Macrophages" PartOfGroup="None" Color="#4DAF4A"/>
+  </AnnotationGroups>
+</ASAP_Annotations>
