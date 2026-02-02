@@ -16,6 +16,11 @@ DEFAULT_CACHE_DIR = Path("~/.histoplus").expanduser()
 # Subfolder under HISTOWMICS_HOME
 HF_SUBCACHE = "hf_cache"
 
+# "~"는 현재 사용자 홈 디렉토리로 확장됨
+hf_cache_dir = (Path("~") / ".histoplus" / "hf_cache").expanduser()
+
+# 문자열이 필요하면
+hf_cache_dir_str = str(hf_cache_dir)
 
 class HistoPLUSAuthError(RuntimeError):
     """Raised when accessing a private Hub repo without proper auth (HF token)."""
@@ -53,7 +58,7 @@ def load_weights_from_hub(
     *,
     map_location: Optional[torch.device] = None,
     pickle_module=pickle,
-    local_files_only: bool = False,
+    local_files_only: bool = True,
     **pickle_load_args,
 ):
     """
@@ -82,7 +87,8 @@ def load_weights_from_hub(
             repo_id=repo_id,
             filename=filename,
             revision=revision,
-            cache_dir=str(_get_cache_dir()),
+            cache_dir=hf_cache_dir_str,
+            #cache_dir=str(_get_cache_dir()),
             local_files_only=local_files_only,
         )
     except LocalEntryNotFoundError as e:

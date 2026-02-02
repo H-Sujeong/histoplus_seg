@@ -1,0 +1,19 @@
+FROM hist:base
+
+# pick a "safe" uid/gid unlikely to exist in base images
+ARG APP_UID=9999
+ARG APP_GID=9999
+
+RUN set -eux; \
+    command -v useradd; command -v groupadd; \
+    # group: create if missing
+    if ! getent group "${APP_GID}" >/dev/null; then groupadd -g "${APP_GID}" appuser; fi; \
+    # user: create if missing
+    if ! getent passwd "${APP_UID}" >/dev/null; then useradd -m -u "${APP_UID}" -g "${APP_GID}" -s /bin/bash appuser; fi; \
+    # if UID exists but name isn't appuser, still ensure "appuser" name exists
+    if ! getent passwd appuser >/dev/null; then useradd -m -u 9998 -g "${APP_GID}" -s /bin/bash appuser; fi; \
+    echo "---- verify /etc/passwd ----"; \
+    getent passwd appuser; \
+    id appuser; \
+    mkdir -p /home/appuser/.cache /home/appuser/.config; \
+    chown -R "$(id -u appuser)":"$(id -g appuser)" /home/appuser

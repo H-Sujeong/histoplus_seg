@@ -4,7 +4,7 @@ set -euo pipefail
 # ----------------------------
 # 기본값
 # ----------------------------
-IMAGE_NAME="hist:base"
+IMAGE_NAME="hist:base-dev"
 CONTAINER_NAME=""
 
 # ----------------------------
@@ -66,6 +66,7 @@ fi
 # ----------------------------
 docker run --rm -it \
   --gpus all \
+  --ipc=host \
   "${NAME_ARGS[@]}" \
   -e HOST_USER="${HOST_USER}" \
   -e HOST_UID="${HOST_UID}" \
