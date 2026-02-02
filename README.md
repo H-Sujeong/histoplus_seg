@@ -1,197 +1,232 @@
 # 🧩 Execution Environment & `run.sh` Usage Guide
 
-본 프로젝트는 **Docker 기반 실행 환경**을 사용하며,
-환경 일관성과 서버 간 이동성을 위해 **`run.sh` 스크립트**를 통해 컨테이너를 실행합니다.
+*(with VS Code Dev Containers)*
+
+> 본 프로젝트는 **Docker 기반 실행 환경**을 사용하며
+>
+> * **배치/추론 실행**은 `run.sh`
+> * **VS Code 기반 개발/디버깅**은 *Dev Containers*
+>   로 **용도를 명확히 분리**하여 운영합니다.
 
 ---
 
-## 1️⃣ ENV 설정을 사용하는 이유
+## 🔟 VS Code Dev Containers 개요
 
-### 🎯 목적
+VS Code Dev Containers는
+**Docker 컨테이너를 “개발 환경”으로 직접 사용하는 기능**입니다.
 
-* **경로/캐시/사용자 환경을 코드에서 하드코딩하지 않기 위함**
-* 서버마다 다른 홈 경로, 스토리지 구조를 **유연하게 대응**
-* Docker 내부에서도 **호스트와 동일한 경로 체계**를 유지
+본 프로젝트에서는 Dev Containers를 통해:
 
-### 🔧 주요 ENV 변수
+* 로컬 Python/Conda 환경 오염 없이 개발
+* 서버 이동 시에도 **동일한 개발 환경 유지**
+* Jupyter / Python Extension / LSP 안정적 사용
+* `run.sh`와 **동일한 Docker 이미지 기반 개발**
 
-컨테이너 실행 시 아래 환경 변수들이 전달됩니다.
+을 목표로 합니다.
 
-* `HOST_USER` : 호스트 사용자 이름
-* `HOST_UID` : 호스트 사용자 UID
-* `HOST_GID` : 호스트 사용자 GID
+> ⚠️ Dev Containers는 **실험 실행(run.sh)** 을 대체하지 않습니다.
+> 👉 *개발/디버깅 전용*입니다.
+
+---
+
+## 1️⃣1️⃣ Dev Containers를 사용하는 이유
+
+### ❓ 왜 `docker exec` / `attach`가 아닌가?
+
+* `docker attach` / `exec`는 **root로 접속되는 경우가 많음**
+* VS Code Server, Python Extension, Jupyter 커널 경로가 꼬이기 쉬움
+* UID/GID remapping이 불안정
+
+👉 **Dev Containers는 이 문제를 구조적으로 해결**합니다.
+
+---
+
+## 1️⃣2️⃣ Dev Containers 구성 파일 위치
+
+프로젝트 루트에 다음 구조가 존재합니다.
+
+```text
+.histoplus_seg/
+├── .devcontainer/
+│   ├── devcontainer.json
+│   └── (선택) dev.Dockerfile
+├── run.sh
+├── Dockerfile
+└── ...
+```
+
+* **`devcontainer.json`**
+  → VS Code가 컨테이너를 어떻게 띄울지 정의
+* (선택) `dev.Dockerfile`
+  → base 이미지 위에 *dev 전용 설정*을 얹고 싶을 때 사용
+
+---
+
+## 1️⃣3️⃣ Dev Containers에서 사용하는 Docker 이미지
+
+Dev Containers는 다음 이미지를 사용합니다.
+
+```json
+"image": "hist:base-dev"
+```
+
+### 🔹 `hist:base` vs `hist:base-dev`
+
+| 이미지             | 용도                           |
+| --------------- | ---------------------------- |
+| `hist:base`     | 배치/추론 실행 (run.sh)            |
+| `hist:base-dev` | VS Code 개발용 (Dev Containers) |
+
+`hist:base-dev`는 다음을 보장합니다.
+
+* placeholder `appuser` 존재
+* entrypoint 기반 UID/GID remap 가능
+* VS Code가 `remoteUser=appuser`로 정상 실행 가능
+
+---
+
+## 1️⃣4️⃣ devcontainer.json 핵심 설정 설명
+
+### 📌 사용자 관련
+
+```json
+"remoteUser": "appuser",
+"containerUser": "appuser"
+```
+
+* VS Code Server / 터미널 / Jupyter 모두 `appuser`로 실행
+* root로 들어가는 문제 방지
+
+---
+
+### 📌 Python / Jupyter 설정
+
+```json
+"python.defaultInterpreterPath": "/opt/micromamba/envs/hist/bin/python",
+"jupyter.jupyterServerType": "local",
+"jupyter.kernelspecPaths": [
+  "/opt/micromamba/envs/hist/share/jupyter/kernels",
+  "/home/appuser/.local/share/jupyter/kernels"
+]
+```
 
 이를 통해:
 
-* 컨테이너 내부에서 생성된 파일의 **권한 문제 방지**
-* NAS / 공용 스토리지 사용 시 **파일 소유권 충돌 최소화**
-
-또한 일부 라이브러리(HF cache, HistoPLUS cache 등)는
-**홈 디렉토리 기반 경로를 기본값으로 사용**하기 때문에
-환경 변수 기반 제어가 중요합니다.
+* VS Code Python Extension이 **hist env를 기본 인터프리터로 인식**
+* Jupyter 커널 자동 탐색
+* 커널이 안 뜨는 문제 방지
 
 ---
 
-## 2️⃣ `run.sh`의 역할
+### 📌 GPU / IPC / Mount 설정
 
-`run.sh`는 단순한 `docker run` 래퍼가 아니라,
-**실험용 컨테이너 실행을 표준화하기 위한 스크립트**입니다.
+Dev Containers는 `run.sh`와 동일한 실행 조건을 유지합니다.
 
-### ✔️ 주요 기능
-
-* GPU 자동 활성화 (`--gpus all`)
-* 현재 작업 디렉토리(`$PWD`)를 컨테이너 작업 디렉토리로 설정
-* 호스트의 주요 경로를 **동일한 경로로 마운트**
-* 사용자 UID/GID 전달
-* 컨테이너 종료 시 자동 제거 (`--rm`)
-* 필요 시 컨테이너 이름 지정 가능
-
----
-
-## 3️⃣ 기본 사용법
-
-```bash
-./run.sh <IMAGE_NAME>
+```json
+"runArgs": [
+  "--gpus", "all",
+  "--ipc=host"
+]
 ```
 
-예시:
-
-```bash
-./run.sh # 기본으로 hist:base가 설정되어있음
-./run.sh hist:base
+```json
+"mounts": [
+  "source=/home,target=/home,type=bind",
+  "source=/data,target=/data,type=bind",
+  "source=/home/nas2_fast,target=/home/nas2_fast,type=bind"
+]
 ```
 
-* 컨테이너는 **현재 디렉토리 기준**으로 실행됩니다.
-* 컨테이너 이름은 Docker가 자동 생성합니다.
+👉 **코드 경로 수정 없이** run.sh ↔ VS Code 환경 전환 가능
 
 ---
 
-## 4️⃣ 컨테이너 이름 지정 (`--name` 옵션)
+## 1️⃣5️⃣ “Reopen in Container” 동작 방식 (중요)
 
-여러 실험을 동시에 실행하거나
-`docker ps`에서 컨테이너를 명확히 식별하고 싶은 경우 사용합니다.
+VS Code에서
+**`Reopen in Container`** 를 실행하면 다음 순서로 동작합니다.
 
-```bash
-./run.sh <IMAGE_NAME> --name <CONTAINER_NAME>
-```
+### 🔄 내부 동작 순서
 
-예시:
+1. `.devcontainer/devcontainer.json` 탐색
+2. 지정된 Docker 이미지 확인 (`hist:base-dev`)
+3. 필요 시 **Dev Containers 전용 파생 컨테이너 생성**
 
-```bash
-./run.sh hist:base --name histoplus-seg
-```
+   * 이름: `vsc-<project>-<hash>`
+4. 컨테이너 실행 시:
 
-> ⚠️ 동일한 이름의 컨테이너가 이미 존재하면 실행이 실패합니다.
-> 필요 시 기존 컨테이너를 먼저 제거하십시오.
+   * `remoteUser=appuser`
+   * UID/GID 자동 보정 (VS Code 기능)
+5. VS Code Server 설치 (`~/.vscode-server`)
+6. Python/Jupyter 확장 로딩
 
-```bash
-docker rm -f histoplus-seg
-```
-
----
-
-## 5️⃣ 자동 마운트되는 경로
-
-아래 호스트 경로들은 **동일한 경로로 컨테이너에 마운트**됩니다.
-
-* 현재 작업 디렉토리 (`$PWD`)
-* `/home`
-* `/data`
-* `/home/nas2_fast`
-
-> ❗ 해당 경로가 호스트에 존재하지 않으면 실행이 중단됩니다.
-
-이 설계를 통해:
-
-* 코드 내 경로 수정 없이 서버 이동 가능
-* NAS / 공용 데이터 접근 시 경로 불일치 문제 방지
+👉 **이 컨테이너는 run.sh로 띄운 컨테이너와 “별개”입니다.**
 
 ---
 
-## 6️⃣ Docker 이미지에 대한 중요 안내 ⚠️
+## 1️⃣6️⃣ Reopen 메뉴 옵션 설명
 
-⚠️ **본 Docker 이미지는 “세그멘테이션/추론 중심” 환경입니다.**
+VS Code Command Palette (`Ctrl+Shift+P`) → `Dev Containers`
 
-* Cell segmentation, inference, feature extraction을 주 용도로 설계됨
-* 다음과 같은 패키지는 **포함되어 있지 않거나 제한적일 수 있습니다**:
+| 메뉴                              | 의미                    |
+| ------------------------------- | --------------------- |
+| **Reopen in Container**         | 처음 컨테이너 열기            |
+| **Rebuild and Reopen**          | 이미지/설정 변경 후 강제 재빌드    |
+| **Reopen Locally**              | 컨테이너 종료 후 로컬로 복귀      |
+| **Attach to Running Container** | ❌ 비권장 (root 문제 발생 가능) |
 
-  * 데이터 분석/시각화용 라이브러리
-  * 일부 통계/ML 패키지
-  * 학습(training) 전용 프레임워크
-
-👉 **추가 패키지가 필요한 경우**
-
-* 별도 이미지 빌드
-* 또는 컨테이너 내부에서 임시 설치 후 사용
-
-을 권장합니다.
+> ⚠️ **`Attach to Running Container`는 권장하지 않습니다.**
+> run.sh로 띄운 컨테이너에 attach 시 root로 접속될 수 있으며,
+> 이는 Dev Containers 설계와 다릅니다.
 
 ---
 
-## 7️⃣ 권장 사용 패턴
+## 1️⃣7️⃣ Dev Containers 권장 사용 패턴
 
-* **세그멘테이션 / 추론 작업**
-  → 본 Docker + `run.sh` 사용
-* **분석 / 시각화 / 실험적 코드**
-  → 별도 환경 또는 확장 이미지 권장
-* **여러 실험 병렬 실행**
-  → `--name` 옵션으로 컨테이너 구분
+### ✅ 권장
 
----
+* 코드 작성 / 디버깅
+* Jupyter Notebook 작업
+* Python LSP / 자동완성
+* 커널 기반 실험
 
-## 8️⃣ 문제 발생 시 체크리스트
-
-1. `docker ps`에서 컨테이너가 실행 중인지
-2. 컨테이너 이름 충돌 여부 (`--name` 사용 시)
-3. 마운트 경로가 호스트에 실제로 존재하는지
-4. GPU 인식 여부 (`nvidia-smi`)
-5. 필요한 패키지가 이미지에 포함되어 있는지
+👉 **VS Code → Reopen in Container**
 
 ---
 
-### 📌 요약
+### ❌ 비권장
 
-* `run.sh`는 **실험 환경 표준화용 실행 스크립트**
-* ENV 설정은 **경로/권한/캐시 문제를 피하기 위한 필수 설계**
-* Docker 이미지는 **세그멘테이션 중심**, 범용 개발 환경이 아님
+* 장시간 배치 추론
+* 멀티 실험 병렬 실행
+* 대규모 데이터 처리
+
+👉 이 경우 **`run.sh` 사용**
 
 ---
 
-9️⃣ Pretrained Weights 안내 (중요)
+## 1️⃣8️⃣ run.sh vs Dev Containers 역할 분리 요약
 
-본 Docker/run.sh 환경에서 사용하는 HistoPLUS pretrained weights는 별도 위치에 제공됩니다.
+| 항목     | run.sh           | Dev Containers |
+| ------ | ---------------- | -------------- |
+| 목적     | 배치/추론 실행         | 개발/디버깅         |
+| 컨테이너   | 직접 실행            | VS Code 관리     |
+| 사용자    | entrypoint remap | remoteUser     |
+| Attach | X                | O              |
+| 안정성    | 높음               | 높음             |
+| 병렬 실행  | O                | X              |
 
-📦 Weights 위치
+---
 
-가중치 다운로드 및 공유 링크:
-👉 [Drive](https://drive.google.com/drive/folders/1xKRdjDWwouGoInnaV_EltAGyw3684euT?usp=drive_link)
+## 📌 최종 요약
 
-해당 링크에는:
+* **run.sh**
 
-HistoPLUS용 pretrained weight 파일
+  * 실험/추론 실행 표준
+  * 서버 자원 사용에 최적
+* **VS Code Dev Containers**
 
-Hugging Face cache 구조를 유지한 아카이브
-
-무결성(symlink) 확인 방법
-
-이 포함되어 있습니다.
-
-📖 사용 방법
-
-가중치의 압축 해제, 배치 위치, 무결성 체크, cache 경로 설정 방법은
-아래 링크에 포함된 README를 반드시 참고하십시오.
-
-👉 관련 사용 방법은 위 링크 내 README를 참고하세요.
-
-본 프로젝트 README에서는 가중치 사용에 대한 중복 설명을 하지 않습니다.
-
-⚠️ 주의 사항
-
-가중치는 Hugging Face cache 구조(blobs / snapshots / refs)를 전제로 합니다.
-
-심볼릭 링크가 깨진 경우 정상 동작하지 않을 수 있습니다.
-
-가중치 관련 문제 발생 시:
-
-링크 내 README의 무결성 체크 섹션
+  * 개발/디버깅 전용
+  * Python/Jupyter/권한 문제 최소화
+* 두 환경은 **의도적으로 분리**되어 있으며
+  이는 설계상 정상입니다.
 
